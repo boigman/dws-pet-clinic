@@ -20,6 +20,6 @@ public class IndexController {
 
     @RequestMapping("/oups")
     public String oupsHandler(){
-        return "notimplemented";
+        return "not_impl";
     }
 }

@@ -92,6 +92,7 @@
   
   	<build>
 	    <plugins>
+<!-- 	    
 	        <plugin>
 	            <groupId>org.springframework.boot</groupId>
 	            <artifactId>spring-boot-maven-plugin</artifactId>
@@ -99,6 +100,7 @@
 	                <skip>false</skip>
 	            </configuration>
 	        </plugin>
+ -->	        
 		      <plugin>
 		        <groupId>ro.isdc.wro4j</groupId>
 		        <artifactId>wro4j-maven-plugin</artifactId>
@@ -124,11 +126,13 @@
 		            <artifactId>bootstrap</artifactId>
 		            <version>${webjars-bootstrap.version}</version>
 		          </dependency>
+<!-- 		          
 		          <dependency>
 		            <groupId>org.mockito</groupId>
 		            <artifactId>mockito-core</artifactId>
 		            <version>${mockito.version}</version>
 		          </dependency>
+ -->		          
 		        </dependencies>
 		      </plugin>
 	        

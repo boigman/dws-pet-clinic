@@ -42,13 +42,11 @@ public class VetSDJpaService implements VetService{
 
 	@Override
 	public void delete(Vet object) {
-		// TODO Auto-generated method stub
 		vetRepository.delete(object);
 	}
 
 	@Override
 	public void deleteById(Long aLong) {
-		// TODO Auto-generated method stub
 		vetRepository.deleteById(aLong);
 	}
 

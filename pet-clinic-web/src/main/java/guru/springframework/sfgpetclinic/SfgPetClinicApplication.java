@@ -1,13 +1,16 @@
 package guru.springframework.sfgpetclinic;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 //import org.springframework.data.mongodb.core.MongoTemplate;
 
 @SpringBootApplication
+//@EnableJpaRepositories("guru.springframework.sfgpetclinic")
+@EntityScan("guru.springframework.sfgpetclinic")
+@ComponentScan("guru.springframework.sfgpetclinic")
+
 //@EnableAutoConfiguration(exclude={MongoAutoConfiguration.class})
 //@ImportResource("classpath:wongo.xml")
 public class SfgPetClinicApplication {

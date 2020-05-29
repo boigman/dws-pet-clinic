@@ -5,10 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 //import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories("guru.springframework.sfgpetclinic")
+//@EnableJpaRepositories("guru.springframework.sfgpetclinic")
 @EntityScan("guru.springframework.sfgpetclinic")
 @ComponentScan("guru.springframework.sfgpetclinic")
 

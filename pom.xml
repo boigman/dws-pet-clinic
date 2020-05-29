@@ -28,6 +28,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-jpa</artifactId>
+		    <version>2.2.7.RELEASE</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,6 +59,10 @@
 		    <groupId>org.springframework.data</groupId>
 		    <artifactId>spring-data-commons</artifactId>
 		</dependency>
+				<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		</dependency>
 		
 <!--  			
     <dependency>
@@ -69,10 +83,26 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+<!--                <configuration>
+                    <mainClass>guru.springframework.sfgpetclinic.SfgPetClinicApplication</mainClass>
+                    <arguments>
+                        <argument>argument1</argument>
+                    </arguments>
+                </configuration>
+ -->				
 			    <configuration>
 			        <skip>true</skip>
 			    </configuration>
+ 			    
 			</plugin>
+			<plugin>
+			  <groupId>org.codehaus.mojo</groupId>
+			  <artifactId>exec-maven-plugin</artifactId>
+			  <version>1.6.0</version>
+			  <configuration>
+			    <mainClass>guru.springframework.sfgpetclinic.SfgPetClinicApplication</mainClass>
+			  </configuration>
+			</plugin>			
 		</plugins>
 	</build>
 

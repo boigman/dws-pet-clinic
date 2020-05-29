@@ -93,6 +93,7 @@ public class DataLoader implements CommandLineRunner {
 		catVisit.setPet(fionasCat);
 		catVisit.setDate(LocalDate.now().minus(Period.ofDays(186)));
 		catVisit.setDescription("Sneezy kitty");
+		System.out.println("Cat Visit: "+catVisit.toString());
 
 		visitService.save(catVisit);
 

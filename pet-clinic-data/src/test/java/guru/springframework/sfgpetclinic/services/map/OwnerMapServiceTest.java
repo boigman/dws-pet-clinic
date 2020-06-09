@@ -85,6 +85,7 @@ class OwnerMapServiceTest {
 		String xLastName = "Quintongo";
 		Integer preSize = ownerMapService.findAll().size();
 		Owner owner5 = Owner.builder().id(id).lastName(xLastName).build();
+		assertNotNull(owner5);
 		ownerMapService.save(owner5);
 		assertEquals(xLastName, ownerMapService.findByLastName(xLastName).getLastName());
 	}

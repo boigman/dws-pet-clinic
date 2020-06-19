@@ -21,7 +21,7 @@
 	        <td th:text="${vet.id}"></td>
 	        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
 	        <td><span th:each="specialty : ${vet.getSpecialties()}"
-	                  th:text="${specialty.description + ' - '}" /> <span
+	                  th:utext="${specialty.description + '<br />'}" /> <span
 	                th:if="${vet?.getSpecialties()?.size() == 0}">none</span></td>
 	    </tr>
 	    </tbody>

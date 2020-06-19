@@ -12,17 +12,20 @@
 		<thead>
 			<tr>
 				<th style="width: 150px;">ID</th>
-				<th style="width: 150px;">First Name</th>
-				<th style="width: 150px;">Last Name</th>
+				<th style="width: 150px;">Name</th>
+				<th style="width: 150px;">Specialty</th>
 			</tr>
 		</thead>
-		<tbody>
-			<tr th:each="vet : ${vets}">
-				<th th:text="${vet.id}">1</th>
-				<th th:text="${vet.firstName}">Joe</th>
-				<th th:text="${vet.lastName}">Buck</th>
-			</tr>
-		</tbody>
+	    <tbody>
+	    <tr th:each="vet : ${vets}">
+	        <td th:text="${vet.id}"></td>
+	        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+	        <td><span th:each="specialty : ${vet.getSpecialties()}"
+	                  th:text="${specialty.description + ' - '}" /> <span
+	                th:if="${vet?.getSpecialties()?.size() == 0}">none</span></td>
+	    </tr>
+	    </tbody>
+
 
 	</table>
 
